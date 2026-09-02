@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extrator de Matrizes por Bastidor Pro — Organize suas Matrizes de Bordado | JDC Tecnologia</title>
+    <meta name="description" content="Organize automaticamente suas matrizes de bordado por bastidor. Compatível com Brother, Janome, Singer, Elgin e mais. Lê .pes, .jef, .dst, .emb e outros formatos. Baixe grátis para testar!">
+    <meta name="keywords" content="extrator de matrizes por bastidor, organizador de matrizes de bordado, separar matrizes por bastidor, organizar arquivos de bordado por tamanho, bastidor bordado, organizador pes jef dst, software organização bordado, matrizes de bordado por bastidor, JDC Tecnologia em Bordados, organizador de bordado, separador por bastidor">
+    <meta name="author" content="JDC Tecnologia em Bordados">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://tecnologiadelta8-beep.github.io/extrator-matrizes-bastidor-pro/">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.7;
+            color: #1f2937;
+            background-color: #f8fafc;
+        }
+        header {
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
+            color: white;
+            padding: 15px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+        }
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .header-left img {
+            height: 55px;
+            width: auto;
+        }
+        .header-left h1 {
+            font-size: 1.35em;
+            margin: 0;
+            border: none;
+            color: white;
+        }
+        .header-left p {
+            font-size: 0.9em;
+            color: #93c5fd;
+            margin-top: 3px;
+        }
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95em;
+            transition: color 0.2s;
+        }
+        nav a:hover {
+            color: #93c5fd;
+        }
+        .phone-btn {
+            background: #22c55e;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 25px;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 0.95em;
+            box-shadow: 0 3px 8px rgba(34,197,94,0.3);
+        }
+        .phone-btn:hover {
+            background: #16a34a;
+        }
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 30px 20px;
+        }
+        h2 {
+            font-size: 1.8em;
+            color: #1e3a5f;
+            margin: 30px 0 15px;
+            padding-bottom: 8px;
+            border-bottom: 3px solid #f59e0b;
+            display: inline-block;
+        }
+        h3 {
+            font-size: 1.25em;
+            color: #1e3a5f;
+            margin: 25px 0 12px;
+        }
+        .version {
+            color: #64748b;
+            font-size: 1.05em;
+            margin: -5px 0 20px;
+        }
+        .highlight-box {
+            background: #eff6ff;
+            border-left: 4px solid #3b82f6;
+            padding: 18px 22px;
+            border-radius: 8px;
+            margin: 25px 0;
+        }
+        .product-image, .screenshot-image {
+            text-align: center;
+            margin: 35px 0;
+        }
+        .product-image img, .screenshot-image img {
+            max-width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+        }
+        .screenshot-image p {
+            color: #4b5563;
+            font-size: 15px;
+            margin-top: 12px;
+            font-style: italic;
+        }
+        .download-box {
+            background: #f0fdf4;
+            border: 2px solid #22c55e;
+            border-radius: 12px;
+            padding: 28px;
+            text-align: center;
+            margin: 35px 0;
+        }
+        .download-box h3 {
+            margin-top: 0;
+            color: #15803d;
+        }
+        .download-box a {
+            display: inline-block;
+            background: #2563eb;
+            color: white;
+            padding: 13px 28px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-top: 12px;
+            transition: background 0.2s;
+        }
+        .download-box a:hover {
+            background: #1d4ed8;
+        }
+        ul, ol {
+            padding-left: 28px;
+            margin: 15px 0;
+        }
+        li {
+            margin: 10px 0;
+        }
+        .check {
+            color: #16a34a;
+            font-weight: bold;
+        }
+        .warning {
+            color: #dc2626;
+            font-weight: bold;
+        }
+        code {
+            background: #f1f5f9;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+        hr {
+            border: none;
+            border-top: 1px solid #e2e8f0;
+            margin: 40px 0;
+        }
+        .quem-somos {
+            background: white;
+            border-radius: 12px;
+            padding: 35px;
+            margin: 40px 0;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        .quem-somos h3 {
+            text-align: center;
+            font-size: 1.45em;
+            color: #1e3a5f;
+            margin-bottom: 25px;
+        }
+        .quem-somos p {
+            margin-bottom: 16px;
+            color: #374151;
+            font-size: 1.05em;
+        }
+        .quem-somos .destaque-frase {
+            font-size: 1.15em;
+            font-weight: bold;
+            color: #1e3a5f;
+            text-align: center;
+            margin: 20px 0;
+            padding: 12px;
+            background: linear-gradient(90deg, #fef3c7, #fef9c3);
+            border-radius: 8px;
+        }
+        .contact-box {
+            background: #fffbeb;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 40px 0;
+            text-align: center;
+            border: 1px solid #fef3c7;
+        }
+        footer {
+            background: #0f172a;
+            color: #94a3b8;
+            text-align: center;
+            padding: 25px;
+            margin-top: 50px;
+            font-size: 0.9em;
+        }
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .quem-somos {
+                padding: 25px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="header-left">
+        <img src="logo-jdc.png" alt="JDC Tecnologia em Bordados">
+        <div>
+            <h1>JDC Tecnologia em Bordados</h1>
+            <p>Manutenção e suporte de softwares de bordado</p>
+        </div>
+    </div>
+    <nav>
+        <a href="#quem-somos">Quem Somos</a>
+        <a href="#produto">O Produto</a>
+        <a href="#recursos">Recursos</a>
+        <a href="#download">Download</a>
+        <a href="tel:+5565999460391" class="phone-btn">📞 (65) 99946-0391</a>
+    </nav>
+</header>
+<main>
+    <h2 id="produto">🧵 Extrator de Matrizes por Bastidor Pro — Organize Automaticamente por Bastidor</h2>
+    <p class="version"><strong>Versão 1.0</strong> — Setembro 2026</p>
+    <div class="highlight-box">
+        <p><strong>Organize automaticamente seus arquivos de bordado,</strong> separando-os em pastas de acordo com o bastidor em que cada matriz cabe — sem precisar abrir arquivo por arquivo para conferir o tamanho manualmente. Rápido, prático e inteligente!</p>
+    </div>
+
+    <!-- IMAGEM PRINCIPAL -->
+    <div class="product-image">
+        <img src="extrator-bastidor-pro.png" alt="Extrator de Matrizes por Bastidor Pro — Organize suas matrizes de bordado automaticamente">
+    </div>
+
+    <!-- 🆕 IMAGEM DA INTERFACE DO PROGRAMA -->
+    <div class="screenshot-image">
+        <img src="tela-do-programa.png" alt="Interface do Programa — Extrator de Matrizes por Bastidor Pro">
+        <p>💡 Interface simples e intuitiva: escolha o fabricante, selecione as pastas e clique em INICIAR</p>
+    </div>
+
+    <div class="download-box" id="download">
+        <h3>⬇️ Baixe Grátis para Testar</h3>
+        <p>Experimente antes de adquirir! Sem compromisso, sem custo inicial.</p>
+        <a href="https://t.me/EmbroGestPro" target="_blank">✈️ t.me/EmbroGestPro</a>
+    </div>
+
+    <hr>
+    <h3>📋 O que o programa faz</h3>
+    <p>O <strong>Extrator de Matrizes por Bastidor Pro</strong> verifica o tamanho de cada matriz e a organiza automaticamente na pasta correspondente ao bastidor compatível. O programa testa do menor para o maior bastidor selecionado e também considera a matriz girada 90°. Matrizes maiores que todos os bastidores escolhidos são enviadas para uma pasta separada chamada <code>_maiores_que_os_selecionados</code>.</p>
+    <h3>🏭 Fabricantes compatíveis</h3>
+    <p>Brother, Janome, Singer, Toyota, Elgin, Bravox, Husqvarna Viking e Huayrama Viking.</p>
+    <h3>📁 Formatos de arquivos suportados</h3>
+    <p>.pes .jef .dst .exp .vp3 .emb .sew .xxx .hus .vip .pec</p>
+    <h3 id="recursos">✨ Principais recursos</h3>
+    <ul>
+        <li>📂 <strong>Organização automática</strong> — separa matrizes por bastidor compatível em segundos</li>
+        <li>📐 <strong>Detecção inteligente</strong> — lê largura, altura e quantidade de pontos direto do arquivo</li>
+        <li>🔄 <strong>Considera rotação de 90°</strong> — encontra o bastidor ideal mesmo girando a matriz</li>
+        <li>📁 <strong>Busca em subpastas</strong> — percorre toda a estrutura de pastas que você já tem</li>
+        <li>✅ <strong>Copiar ou mover</strong> — opção de copiar (mantém originais) ou mover arquivos</li>
+        <li>🛡️ <strong>Evita duplicatas</strong> — arquivos com mesmo nome e dimensões iguais não são copiados; nomes iguais recebem sufixo automático (_1, _2...)</li>
+        <li>📄 <strong>Relatórios completos</strong> — exporta relatório em TXT ou CSV com bastidor de destino de cada matriz e eventuais erros</li>
+        <li>🧠 <strong>Leitura nativa de arquivos .EMB</strong> — lê dimensões direto de arquivos Wilcom sem precisar de programa terceiro instalado</li>
+        <li>⏸️ <strong>Controle total</strong> — pode PAUSAR ou PARAR o processamento a qualquer momento</li>
+        <li>🖱️ <strong>Interface simples e intuitiva</strong> — basta escolher fabricante, pastas e clicar em INICIAR</li>
+    </ul>
+    <h3>📝 Passo a passo para usar</h3>
+    <ol>
+        <li>Escolha o <strong>Fabricante</strong> da sua máquina de bordar — os bastidores disponíveis carregam automaticamente</li>
+        <li>Selecione a <strong>Pasta de Origem</strong> (suas matrizes) e a <strong>Pasta de Destino</strong> — o programa cria uma subpasta com o nome da origem para não misturar lotes</li>
+        <li>Marque na lista os <strong>Bastidores Disponíveis</strong> que deseja usar (use "Selecionar" e "Limpar" para agilizar)</li>
+        <li>Ative opções extras: <em>Mover arquivos (não copiar)</em> ou <em>Buscar em subpastas</em>, se precisar</li>
+        <li>Clique em <strong>INICIAR</strong> e acompanhe o andamento pela barra de progresso e log na tela; use PAUSAR ou PARAR quando quiser</li>
+        <li>Ao final, gere o <strong>Relatório TXT ou CSV</strong> com o resumo completo de todas as matrizes e eventuais erros</li>
+    </ol>
+    <h3>💻 Requisitos do Sistema</h3>
+    <p><span class="check">✅</span> Windows 10 64 bits ou Windows 11 64 bits<br>
+    <span class="warning">⚠️</span> Não compatível com versões antigas ou 32 bits</p>
+    <h3>🔑 Ativação da Licença</h3>
+    <p>Na primeira abertura, aparece a tela de Ativação com o <strong>HWID</strong> (identificador do computador). Copie e envie para o suporte JDC para receber seu código de ativação, ou use o botão de <strong>Teste Gratuito</strong> para experimentar com usos limitados. Licença vitalícia com atualizações.</p>
+    <hr>
+    <div class="quem-somos" id="quem-somos">
+        <h3>🏆 JDC Tecnologia em Bordados</h3>
+        <p>Com mais de <strong>10 anos de experiência</strong> no mercado, somos referência em <strong>manutenção, instalação e suporte de softwares de bordado</strong>.</p>
+        <p>Atendemos <strong>milhares de clientes pelo mundo todo</strong>, com <strong>dezenas de atendimentos diários</strong> — <strong>agende já o seu!</strong></p>
+        <p>Nosso crescimento acontece pela confiança e qualidade do atendimento — um cliente indica o outro pelos bons resultados.</p>
+        <p class="destaque-frase">💡 Do bordado à gestão, a JDC tem a solução!</p>
+        <p>Agora desenvolvendo softwares inteligentes pra melhorar o seu dia a dia.</p>
+    </div>
+    <div class="contact-box">
+        <h3>📞 Quer saber mais? Fale conosco!</h3>
+        <p><strong>JDC Tecnologia em Bordados</strong></p>
+        <p>💬 WhatsApp: +55 65 99946-0391<br>
+        ✈️ Telegram: @Juarezcunha</p>
+    </div>
+</main>
+<footer>
+    <p>#extratordematrizes #organizadordebordado #bastidor #matrizesdebordado #bordado #JDCtecnologia</p>
+    <p style="margin-top:10px;">📞 +55 65 99946-0391 | Atendimento em todo o Brasil e exterior</p>
+</footer>
+</body>
+</html>
